@@ -26,6 +26,7 @@ python 实现获取谷歌发布的安卓安全补丁信息;Python implementation
 
 ### 文件结构
 
+```
 android_sec/
 ├── cve_details/ # 按月份存储的 CVE 详情 JSON 文件
 │ ├── cve_YYYY-MM-01.json # 每月安全公告的 CVE 详情
@@ -35,6 +36,7 @@ android_sec/
 ├── latest_patch.txt # 记录最新补丁日期
 ├── main.py # 主程序
 └── processed_urls.json # 已处理的 URL 记录
+```
 
 ### 使用方法
 
