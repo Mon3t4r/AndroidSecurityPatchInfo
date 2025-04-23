@@ -1,2 +1,41 @@
 # AndroidSecurityPatchInfo
-python实现获取谷歌发布的安卓安全补丁信息;Python implementation to fetch Android security patch information released by Google.
+
+python 实现获取谷歌发布的安卓安全补丁信息;Python implementation to fetch Android security patch information released by Google.
+
+## Android 安全补丁分析工具
+
+### 数据来源
+
+数据主要来自 Android 安全公告和 CVE 数据库，包含了开源和闭源组件的安全漏洞信息。
+
+### 介绍
+
+该工具用于分析 Android 平台上的安全补丁，包括补丁的发布日期、补丁的下载链接、补丁的 CVE 编号等信息。
+
+### 功能
+
+- 自动获取最新的 Android 安全补丁信息
+- 分析补丁的发布日期、补丁的下载链接、补丁的 CVE 编号等信息
+- 保存分析结果到本地文件
+
+### 依赖
+
+- Python 3.x
+- requests
+- BeautifulSoup
+
+### 文件结构
+
+android_sec/
+├── cve_details/ # 按月份存储的 CVE 详情 JSON 文件
+│ ├── cve_YYYY-MM-01.json # 每月安全公告的 CVE 详情
+├── android_patches.json # Android 补丁汇总信息
+├── cve_details_YYYY-MM-01.json # 最新的 CVE 详情文件
+├── fetchNewestPatch.py # 获取最新安全补丁的脚本
+├── latest_patch.txt # 记录最新补丁日期
+├── main.py # 主程序
+└── processed_urls.json # 已处理的 URL 记录
+
+### 使用方法
+
+可以通过运行 main.py 来处理 CVE 数据，或使用 fetchNewestPatch.py 获取最新的安全补丁信息。
